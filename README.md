@@ -2,6 +2,7 @@
 
 Ứng dụng **PyQt6 YouTube Downloader** giúp tải video và âm thanh MP3 từ YouTube với giao diện đẹp, thân thiện và hỗ trợ các tùy chọn linh hoạt như chất lượng 4K, âm thanh MP3 cao cấp, và hiển thị tiến trình tải trực quan.
 
+![Banner](https://raw.githubusercontent.com/webdep24h/PingMonitorTool/main/images/ytb-download.png)
 ---
 
 ### 🛠️ Tải xuống và sử dụng
