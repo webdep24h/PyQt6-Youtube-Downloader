@@ -84,7 +84,7 @@ PyQt6-Youtube-Downloader/
 ---
 
 ### **4. Cấu hình FFmpeg**
-1. FFmpeg đã được đính kèm trong thư mục `tools` của dự án:
+1. FFmpeg tải về và cho vào thư mục `tools` của dự án:
    - Đường dẫn: `tools/ffmpeg.exe`.
 2. Đảm bảo file `ffmpeg.exe` có mặt để ứng dụng hoạt động bình thường.
 
