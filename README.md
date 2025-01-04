@@ -101,6 +101,62 @@ PyQt6-Youtube-Downloader/
 
 ---
 
+### **6. Đóng gói và Tạo file thực thi với PyInstaller**
+1. Lệnh tạo file .exe: Chạy lệnh sau trong terminal hoặc command prompt tại thư mục chứa `main.py`:
+   ```bash
+   pyinstaller --onefile --add-data "tools/ffmpeg.exe;tools" --noconsole main.py
+   ```
+Ý nghĩa các tham số:
+- `--onefile`: Đóng gói toàn bộ thành một file `.exe` duy nhất.
+- `--add-data`: Thêm file `ffmpeg.exe` vào thư mục tools trong file `.exe`.
+- Cú pháp: `"tools/ffmpeg.exe;tools"`:
+- - Trước dấu `;`: Đường dẫn đến `ffmpeg.exe` trong dự án.
+- - Sau dấu `;`: Thư mục mà file sẽ được sao chép vào khi chạy ứng dụng.
+- `--noconsole`: Ẩn cửa sổ console khi chạy ứng dụng.
+2. Chạy file thực thi
+Sau khi chạy lệnh trên, PyInstaller sẽ tạo thư mục `dist/` trong dự án.
+File thực thi  `.exe` sẽ nằm trong thư mục:
+    ```bash
+    dist/Youtobe-download.exe
+    ```
+Chạy file   `.exe` bằng cách double-click.
+
+3. Tối ưu và kiểm tra
+- Kiểm tra thư mục tạm: Khi chạy file `.exe`, PyInstaller sẽ giải nén các file (như `ffmpeg.exe`) vào thư mục tạm. Đảm bảo `tools/ffmpeg.exe` được sử dụng đúng cách trong mã:
+    ```bash
+  def get_ffmpeg_path(self):
+    # Kiểm tra nếu đang chạy dưới dạng file thực thi
+    if getattr(sys, 'frozen', False):
+        base_path = sys._MEIPASS  # Thư mục tạm của PyInstaller
+    else:
+        base_path = os.path.dirname(__file__)
+    return os.path.join(base_path, 'tools', 'ffmpeg.exe')
+    ```
+- Tối ưu kích thước file `.exe`:
+Dùng tùy chọn `--upx-dir` nếu đã cài UPX để nén file .exe:
+```bash
+pyinstaller --onefile --add-data "tools/ffmpeg.exe;tools" --noconsole --upx-dir /path/to/upx main.py
+```
+- Kiểm tra trên các máy khác:
+Chạy file `.exe` trên các máy tính khác không cài Python.
+Đảm bảo các file phụ thuộc như `ffmpeg.exe` hoạt động bình thường.
+
+4. Cách chia sẽ ứng dụng
+- Tạo file nén:
+Nén thư mục `dist/` thành file `.zip` hoặc `.rar` để chia sẻ:
+```plaintext
+dist/
+└── Youtobe-download.exe
+```
+
+5. Kiểm tra lệnh đầy đủ
+Dưới đây là lệnh đầy đủ để đóng gói ứng dụng:
+```bash
+pyinstaller --onefile --add-data "tools/ffmpeg.exe;tools" --noconsole main.py
+```
+
+---
+
 ## **🎮 Cách sử dụng ứng dụng**
 
 ### **Bước 1**: Nhập URL video hoặc danh sách phát
