@@ -7,9 +7,9 @@
 
 ### 🛠️ Tải xuống và sử dụng
 
-[![Click để tải](https://raw.githubusercontent.com/webdep24h/PingMonitorTool/main/images/Download.png)](https://drive.google.com/file/d/1nC9l42vyAcZieuZ7g73JpZ3LJm0Md0vq/view?usp=sharing)
+[![Click để tải](https://raw.githubusercontent.com/webdep24h/PingMonitorTool/main/images/Download.png)](https://drive.google.com/file/d/1tP8gbXNrP6fepEpGN42TMOypJpHvfkLa/view?usp=sharing)
 
-Download tool tại: [PingMonitorTool](https://drive.google.com/file/d/1nC9l42vyAcZieuZ7g73JpZ3LJm0Md0vq/view?usp=sharing)
+Download tool tại: [PingMonitorTool](https://drive.google.com/file/d/1tP8gbXNrP6fepEpGN42TMOypJpHvfkLa/view?usp=sharing)
 
 ---
 ## **🚀 Tính năng**
